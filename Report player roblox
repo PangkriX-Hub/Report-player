@@ -1,0 +1,72 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Report Player by Grok (Pangkrix)",
+    LoadingTitle = "Report Reasons",
+    LoadingSubtitle = "by Pangkrix",
+    ConfigurationSaving = {
+        Enabled = false,
+        FolderName = nil,
+        FileName = "report_player"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = nil,
+        RememberJoins = false
+    },
+    KeySystem = false
+})
+
+local Tab = Window:CreateTab("Report Reasons", nil) -- Tab utama
+
+-- Button 1: Avatar clothing or accessory
+Tab:CreateButton({
+    Name = "Avatar clothing or accessory",
+    Callback = function()
+        setclipboard("Players might report due to avatar clothing or accessories that violate rules, such as inappropriate designs or those not aligning with Roblox community guidelines.")
+        Rayfield:Notify({
+            Title = "Copied!",
+            Content = "Teks alasan report telah disalin ke clipboard.",
+            Duration = 3
+        })
+    end
+})
+
+-- Button 2: Game or experience
+Tab:CreateButton({
+    Name = "Game or experience",
+    Callback = function()
+        setclipboard("Reports might arise if a game or experience includes harmful elements, like violent or exploitative content.")
+        Rayfield:Notify({
+            Title = "Copied!",
+            Content = "Teks alasan report telah disalin ke clipboard.",
+            Duration = 3
+        })
+    end
+})
+
+-- Button 3: Item or asset
+Tab:CreateButton({
+    Name = "Item or asset",
+    Callback = function()
+        setclipboard("Players may report items or assets (e.g., weapons or in-game objects) used improperly or considered offensive.")
+        Rayfield:Notify({
+            Title = "Copied!",
+            Content = "Teks alasan report telah disalin ke clipboard.",
+            Duration = 3
+        })
+    end
+})
+
+-- Button 4: Player movement or emote
+Tab:CreateButton({
+    Name = "Player movement or emote",
+    Callback = function()
+        setclipboard("This might relate to player movements or emotes deemed disruptive, such as spamming actions or inappropriate behavior.")
+        Rayfield:Notify({
+            Title = "Copied!",
+            Content = "Teks alasan report telah disalin ke clipboard.",
+            Duration = 3
+        })
+    end
+})
